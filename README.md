@@ -1,24 +1,21 @@
-# guess who
+# Guess Who
 
-guess who but make it fun, pretty, and customizable. 
+Simple local application to let you play Guess Who.  
+Upload image files and click on them to mark them as irrelevant.
 
-add in your own custom people and create your own guess who board with your friends. the perfect way to expose yourself for not remembering anyone's names. 
+Forked from [ashshah1/guess-who](https://github.com/ashshah1/guess-who), then significantly simplified.
 
-coming to a web app near you in 2021.
+# Modified by PatTheHyruler
+* Rewrite in TypeScript
+* Remove game logic, multiplayer etc.
+* Implement image uploading
 
-[try it out here!](https://guess-who-f8d88.web.app/)
-
-# created by
+# Original created by
 
 * ash shah
 * megan calverley
 * perhaps claire beard, if she wants in. she has a full time job lined up though so this might be beneath her
 
-
 # beep boop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
-
-Realtime playing and chat functions implementing using [PubNub](https://www.pubnub.com/)
-
-
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  

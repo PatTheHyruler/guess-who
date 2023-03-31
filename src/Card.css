@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     background-color: white;
-    width: 9rem;
-    height: 9rem;
+    min-width: 9rem;
+    min-height: 9rem;
     margin: 1rem;
     border-radius: 5px;
     text-align: center;
@@ -17,13 +17,6 @@
     font-size: 1.2rem;
 }
 
-.guess {
-    /*background-color: #39AE4B;*/
-    /*border-radius: 3px;*/
-    /*margin-left: 0.4rem;*/
-    /*margin-right: 0.4rem;*/
-}
-
 .hidden {
     display: none;
 }
@@ -34,8 +27,9 @@
 
 .card-clicked {
     background-color: lightgrey;
+    text-decoration: line-through;
 }
 
-.decor {
-    text-decoration: line-through;
+.card-clicked img {
+    opacity: 50%;
 }

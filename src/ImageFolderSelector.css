@@ -1,0 +1,11 @@
+.drop-zone {
+    margin: auto;
+    margin-top: 1em;
+    width: fit-content;
+    padding-top: 0.6em;
+    padding-bottom: 1em;
+    padding-inline: 4em;
+    text-align: center;
+    background-color: aqua;
+    border-radius: 1em;
+}
