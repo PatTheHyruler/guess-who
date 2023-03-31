@@ -3,6 +3,8 @@
 Simple local application to let you play Guess Who.  
 Upload image files and click on them to mark them as irrelevant.
 
+Demo (probably) available [here](https://hyruler.com/GuessWho)
+
 Forked from [ashshah1/guess-who](https://github.com/ashshah1/guess-who), then significantly simplified.
 
 # Modified by PatTheHyruler

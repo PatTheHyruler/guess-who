@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/GuessWho'>
       <div className="app-container">
 
         <Routes>
