@@ -7,6 +7,8 @@ interface GameBoardProps {
     people: Array<Person> | null,
     startRound: boolean,
     removePerson: (id: string) => void,
+    selectedPerson: Person | null,
+    setSelectedPerson: (person: Person) => void,
 }
 
 function GameBoard(props: GameBoardProps) {
@@ -17,6 +19,8 @@ function GameBoard(props: GameBoardProps) {
                 person={person}
                 startRound={props.startRound}
                 removePerson={props.removePerson}
+                selectedPerson={props.selectedPerson}
+                setSelectedPerson={props.setSelectedPerson}
             />
         )
     })

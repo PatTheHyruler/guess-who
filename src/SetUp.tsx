@@ -6,15 +6,14 @@ import ClearPeopleElement from './ClearPeople';
 
 
 interface SetUpProps {
-    people: Array<Person>;
-    addPerson: (name: string, imagePath?: string | null) => void;
-    clearPeople: () => void;
+    people: Array<Person>,
+    addPerson: (name: string, imagePath?: string | null) => void,
+    clearPeople: () => void,
 }
 
 function SetUp(props: SetUpProps) {
     return (
         <div>
-            <div className="set-up-page">&nbsp;</div>
             <div className='set-up-container'>
                 <ImageFolderSelector addPerson={props.addPerson} />
                 <ClearPeopleElement clearPeople={props.clearPeople}></ClearPeopleElement>

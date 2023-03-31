@@ -1,0 +1,18 @@
+.selected-person-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0.5em;
+    border-radius: 2em;
+    background-color: rgb(215, 233, 250);
+    border: 1.5px solid rgb(99, 147, 177);
+}
+
+.selected-person-title {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.not-selected {
+    padding: 2em;
+}

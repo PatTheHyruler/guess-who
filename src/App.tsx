@@ -10,6 +10,7 @@ function App() {
   const SAMPLE_PEOPLE: Array<Person> = [];
 
   const [people, setPeople] = useState(SAMPLE_PEOPLE);
+  const [selectedPerson, setSelectedPerson] = useState<Person | null>(null);
 
   const addPerson = (newName: string, imagePath: string | null = null) => {
     setPeople(prevPeople => {
@@ -35,6 +36,10 @@ function App() {
     setPeople([]);
   }
 
+  const clearSelectedPerson = () => {
+    setSelectedPerson(null);
+  }
+
   return (
     <BrowserRouter basename='/GuessWho'>
       <div className="app-container">
@@ -43,7 +48,18 @@ function App() {
           <Route
             path="/"
             element={
-              <Game people={people} playing={true} startRound={false} host={false} addPerson={addPerson} removePerson={removePerson} clearPeople={clearPeople} />
+              <Game
+                people={people}
+                playing={true}
+                startRound={false}
+                host={false}
+                addPerson={addPerson}
+                removePerson={removePerson}
+                clearPeople={clearPeople}
+                selectedPerson={selectedPerson}
+                setSelectedPerson={setSelectedPerson}
+                clearSelectedPerson={clearSelectedPerson}
+              />
             }
           />
 
