@@ -13,15 +13,15 @@ function App() {
 
   const addPerson = (newName: string, imagePath: string | null = null) => {
     setPeople(prevPeople => {
-      let newPerson = new Person(newName, imagePath);
+      let newPerson = new Person(crypto.randomUUID(), newName, imagePath);
       let updatedPeople = [...prevPeople];
       updatedPeople.push(newPerson);
       return updatedPeople;
     });
   }
 
-  const removePerson = (cutName: string) => {
-    let removePerson = people.find(p => p.name === cutName);
+  const removePerson = (id: string) => {
+    let removePerson = people.find(p => p.id === id);
     if (!removePerson) return;
     let index = people.indexOf(removePerson);
     let updatedPeople = [...people]

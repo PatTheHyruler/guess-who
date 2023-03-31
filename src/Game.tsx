@@ -10,7 +10,7 @@ interface GameProps {
     startRound: boolean,
     host: boolean,
     addPerson: (name: string, imagePath?: string | null) => void,
-    removePerson: (name: string) => void,
+    removePerson: (id: string) => void,
     clearPeople: () => void,
 }
 
@@ -18,10 +18,11 @@ function Game(props: GameProps) {
     return (
         <div>
             <div className="game-play-page">&nbsp;</div>
-            <SetUp people={props.people} addPerson={props.addPerson} removePerson={props.removePerson} clearPeople={props.clearPeople}></SetUp>
+            <SetUp people={props.people} addPerson={props.addPerson} clearPeople={props.clearPeople}></SetUp>
             <GameBoard
                 people={props.people}
                 startRound={props.startRound}
+                removePerson={props.removePerson}
             />
         </div>
     )

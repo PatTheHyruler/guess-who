@@ -1,9 +1,4 @@
 export class Person {
-    name: string;
-    imagePath: string | null;
-
-    constructor(name: string, imagePath: string | null = null) {
-        this.name = name;
-        this.imagePath = imagePath;
+    constructor(public readonly id: string, public name: string, public imagePath: string | null = null) {
     }
 }

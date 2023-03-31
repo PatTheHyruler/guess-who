@@ -5,7 +5,8 @@ import { Person } from './Person';
 
 interface CardProps {
     startRound: boolean,
-    person: Person
+    person: Person,
+    removePerson: (id: string) => void,
 }
 
 function Card(props: CardProps) {
@@ -22,11 +23,10 @@ function Card(props: CardProps) {
     }
 
     return (
-        <div className="col-md-2 col-lg-2">
-            <div className={classNames} onClick={() => setCrossed(!isCrossed)} >
-                <p>{props.person.name}</p>
-                <img alt='' src={props.person.imagePath ?? undefined} />
-            </div>
+        <div className={classNames} onClick={() => setCrossed(!isCrossed)} >
+            <p className='card-title'>{props.person.name}</p>
+            <button className='btn btn-danger card-remove' onClick={() => props.removePerson(props.person.id)}>X</button>
+            <img alt='' src={props.person.imagePath ?? undefined} />
         </div>
     )
 }

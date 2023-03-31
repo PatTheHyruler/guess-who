@@ -8,7 +8,6 @@ import ClearPeopleElement from './ClearPeople';
 interface SetUpProps {
     people: Array<Person>;
     addPerson: (name: string, imagePath?: string | null) => void;
-    removePerson: (name: string) => void;
     clearPeople: () => void;
 }
 
