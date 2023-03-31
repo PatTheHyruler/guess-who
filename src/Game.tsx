@@ -2,7 +2,7 @@ import './Game.css';
 import GameBoard from './GameBoard';
 import React from 'react';
 import { Person } from './Person';
-import ImageFolderSelector from './ImageFolderSelector';
+import SetUp from './SetUp';
 
 interface GameProps {
     playing: boolean,
@@ -15,14 +15,12 @@ interface GameProps {
 }
 
 function Game(props: GameProps) {
-    let names = props.people;
-
     return (
         <div>
             <div className="game-play-page">&nbsp;</div>
-            <ImageFolderSelector addPerson={props.addPerson} ></ImageFolderSelector>
+            <SetUp people={props.people} addPerson={props.addPerson} removePerson={props.removePerson} clearPeople={props.clearPeople}></SetUp>
             <GameBoard
-                people={names}
+                people={props.people}
                 startRound={props.startRound}
             />
         </div>

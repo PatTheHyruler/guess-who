@@ -2,6 +2,7 @@ import './SetUp.css';
 import React from 'react';
 import { Person } from './Person';
 import ImageFolderSelector from './ImageFolderSelector';
+import ClearPeopleElement from './ClearPeople';
 
 
 interface SetUpProps {
@@ -12,12 +13,13 @@ interface SetUpProps {
 }
 
 function SetUp(props: SetUpProps) {
-    let people = props.people;
-
     return (
         <div>
             <div className="set-up-page">&nbsp;</div>
-            <ImageFolderSelector addPerson={props.addPerson} />
+            <div className='set-up-container'>
+                <ImageFolderSelector addPerson={props.addPerson} />
+                <ClearPeopleElement clearPeople={props.clearPeople}></ClearPeopleElement>
+            </div>
         </div>
     )
 }
