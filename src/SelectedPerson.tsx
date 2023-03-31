@@ -4,8 +4,10 @@ import './SelectedPerson.css';
 import './Card.css'
 
 interface SelectedPersonProps {
+    people: Array<Person>,
     person: Person | null,
     clearSelectedPerson: () => void,
+    setSelectedPerson: (person: Person) => void,
 }
 
 function SelectedPerson(props: SelectedPersonProps) {
@@ -22,10 +24,22 @@ function SelectedPerson(props: SelectedPersonProps) {
         );
     }
 
+    const getRandomPerson = () => {
+        return props.people.at(Math.floor(Math.random() * props.people.length)) ?? null;
+    }
+
+    const randomPersonButton = () => {
+        if (props.people.length === 0) return <></>;
+        return <button className="btn btn-primary" onClick={(() => props.setSelectedPerson(getRandomPerson()!))}>Pick random person</button>
+    }
+
     const selectedOrNotSelectedElement = () => {
         if (props.person === null) {
             return (
-                <div className="not-selected">No person selected</div>
+                <div className="not-selected">
+                    No person selected
+                    {randomPersonButton()}
+                </div>
             );
         } else {
             return selectedPersonElement();

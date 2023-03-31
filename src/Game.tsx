@@ -32,7 +32,7 @@ function Game(props: GameProps) {
                     setSelectedPerson={props.setSelectedPerson}
                 />
             </div>
-            <SelectedPerson person={props.selectedPerson} clearSelectedPerson={props.clearSelectedPerson}></SelectedPerson>
+            <SelectedPerson people={props.people} person={props.selectedPerson} clearSelectedPerson={props.clearSelectedPerson} setSelectedPerson={props.setSelectedPerson}></SelectedPerson>
         </>
     )
 }
